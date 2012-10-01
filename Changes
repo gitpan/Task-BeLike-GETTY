@@ -3,8 +3,14 @@ Changes from 1738-12-18 00:00:00 +0000 to present.
 ==================================================
 
 -------------------------------------------------
-version 20121001.000 at 2012-10-01 02:15:50 +0000
+version 20121001.001 at 2012-10-01 03:36:05 +0000
 -------------------------------------------------
+
+  Change: 956594ed4268e9da9ee881b5c1dd2f2fb69ef298
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-10-01 05:35:47 +0000
+
+    Ok, much more serious, much more modules! 
 
   Change: ee0a4767775d83b4163d315dc0901a406569c03a
   Author: Torsten Raudssus <torsten@raudss.us>
