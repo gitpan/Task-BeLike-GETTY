@@ -1,0 +1,23 @@
+==================================================
+Changes from 1738-12-18 00:00:00 +0000 to present.
+==================================================
+
+-------------------------------------------------
+version 20121001.000 at 2012-10-01 02:15:50 +0000
+-------------------------------------------------
+
+  Change: ee0a4767775d83b4163d315dc0901a406569c03a
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-10-01 04:14:01 +0000
+
+    Deleted all skeleton tests, added task packages, set dist.ini 
+
+  Change: 306899d1e2720630dd98382facf174307273b192
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-10-01 03:40:08 +0000
+
+    initial commit 
+
+================
+End of releases.
+================
