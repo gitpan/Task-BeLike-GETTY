@@ -5,7 +5,7 @@ BEGIN {
   $Task::BeLike::GETTY::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Task::BeLike::GETTY::VERSION = '20121001.001';
+  $Task::BeLike::GETTY::VERSION = '20130420.000';
 }
 # ABSTRACT: be like GETTY (without the insanity hopefully) -- use what drives his gears
 
@@ -21,7 +21,7 @@ Task::BeLike::GETTY - be like GETTY (without the insanity hopefully) -- use what
 
 =head1 VERSION
 
-version 20121001.001
+version 20130420.000
 
 =head1 TASK CONTENTS
 
@@ -136,10 +136,6 @@ prefered if speed is no relevance.
 =head3 L<Template::Provider::Encoding>
 
 You will need this for utf8.
-
-=head3 L<Template::Stash::XS>
-
-A faster stash for L<Template>, written in XS (so needs get compiled).
 
 =head3 L<Text::Xslate> 1.5018
 

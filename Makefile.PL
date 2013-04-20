@@ -11,9 +11,7 @@ use ExtUtils::MakeMaker 6.30;
 my %WriteMakefileArgs = (
   "ABSTRACT" => "be like GETTY (without the insanity hopefully) -- use what drives his gears",
   "AUTHOR" => "Torsten Raudssus <torsten\@raudss.us>",
-  "BUILD_REQUIRES" => {
-    "Test::More" => "0.96"
-  },
+  "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
@@ -92,7 +90,6 @@ my %WriteMakefileArgs = (
     "String::ProgressBar" => 0,
     "Template" => "2.22",
     "Template::Provider::Encoding" => 0,
-    "Template::Stash::XS" => 0,
     "Test::Dirs" => 0,
     "Test::LoadAllModules" => 0,
     "Test::More" => 0,
@@ -103,12 +100,29 @@ my %WriteMakefileArgs = (
     "Web::Simple" => "0.020",
     "YAML" => "0.84"
   },
-  "VERSION" => "20121001.001",
+  "TEST_REQUIRES" => {
+    "Test::LoadAllModules" => "0.021",
+    "Test::More" => "0.96"
+  },
+  "VERSION" => "20130420.000",
   "test" => {
     "TESTS" => "t/*.t"
   }
 );
 
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
+  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
+  for my $mod ( keys %$tr ) {
+    if ( exists $br->{$mod} ) {
+      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
+    }
+    else {
+      $br->{$mod} = $tr->{$mod};
+    }
+  }
+}
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
